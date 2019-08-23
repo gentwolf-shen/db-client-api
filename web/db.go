@@ -173,6 +173,9 @@ func (this Db) send(method string, item interface{}) ([]byte, error) {
 
 	body, err := httpclient.PostToBody(this.dbServer+method, b, headers)
 	if err != nil {
+		if len(body) == 0 {
+			return nil, err
+		}
 		return nil, errors.New(string(body))
 	}
 
