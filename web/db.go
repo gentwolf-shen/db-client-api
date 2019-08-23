@@ -121,7 +121,7 @@ func (this Db) Insert(item *entity.SqlMessage) (int64, error) {
 事务处理，多条SQL必须是操作同一数据库
 SQL: UPDATE、INSERT、DELETE
 */
-func (this Db) Transaction(items []*entity.SqlMessage) (bool, error) {
+func (this Db) TransactionV1(items []*entity.SqlMessage) (bool, error) {
 	if _, err := this.send("/v1/transaction", items); err != nil {
 		return false, err
 	}
