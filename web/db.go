@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 
-	"db-client-api/auth"
-	"db-client-api/entity"
+	"github.com/gentwolf-shen/db-client-api/auth"
+	"github.com/gentwolf-shen/db-client-api/entity"
 
 	"github.com/gentwolf-shen/gohelper/httpclient"
 )
