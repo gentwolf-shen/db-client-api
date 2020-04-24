@@ -12,7 +12,6 @@ type Db struct {
 	dbServer  string
 	appKey    string
 	appSecret string
-	expires   int64
 }
 
 func New(dbServer, appKey, appSecret string) *Db {
@@ -20,12 +19,7 @@ func New(dbServer, appKey, appSecret string) *Db {
 		dbServer:  dbServer,
 		appKey:    appKey,
 		appSecret: appSecret,
-		expires:   600,
 	}
-}
-
-func (this *Db) Set(expires int64) {
-	this.expires = expires
 }
 
 /**
