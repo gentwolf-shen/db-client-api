@@ -109,7 +109,7 @@ func testTransactionV2(dbClient *web.Db) {
 		{"username C", "email C"},
 	}
 
-	bl, err := dbClient.TransactionV2(item)
+	bl, err := dbClient.Transaction(item)
 	fmt.Println(err)
 	fmt.Println(bl)
 }
